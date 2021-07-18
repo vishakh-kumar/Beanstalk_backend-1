@@ -38,6 +38,6 @@ include CurrentRoasterConcern
 end
 
 =begin
-curl --header "Content-Type: application/json" --request POST --data '{"roaster": {"email": "merit@coffee.com", "password": "meritcoffee"}}' http://localhost:3000/sessions
+curl --header "Content-Type: application/json" --request POST --data '{"roaster": {"email": "merit@coffee.com", "password": "meritcoffee"}}' http://localhost:3001/sessions
 =end
 

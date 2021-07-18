@@ -1,9 +1,10 @@
 Rails.application.config.middleware.insert_before 0, 
 Rack::Cors do 
   allow do
-    origins "*"
-    resource "*", headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head], credentials: false
+    origins "http://localhost:3000"
+    resource "*", headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head], credentials: true
   end
+
   # allow do
   #   origin "https://beanstalk_api.heroku.com"
   #   resource "*", headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head], credentials: true

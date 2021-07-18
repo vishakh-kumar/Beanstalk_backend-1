@@ -5,8 +5,8 @@ class RegistrationsController < ApplicationController
     roaster = Roaster.create(
       name: params['roaster']['name'],
       password: params['roaster']['password'],
-      password_confirmation: params['user']['password'],
-      email: params['user']['email']
+      password_confirmation: params['roaster']['password'],
+      email: params['roaster']['email']
     )
 
     if roaster
