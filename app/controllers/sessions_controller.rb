@@ -1,4 +1,23 @@
 class SessionsController < ApplicationController
+include CurrentRoasterConcern
+  def logged_in
+    if @current_roaster
+      render json: {
+        logged_in: true,
+        roaster: @current_roaster
+      }
+    else
+      render json: {
+        loggin_in: false
+      }
+    end
+  end
+
+  def logout 
+    reset_session
+    render json: {status: 200, logged_out: true}
+  end
+
 
   def create
     roaster = Roaster
@@ -18,4 +37,7 @@ class SessionsController < ApplicationController
   end
 end
 
+=begin
+curl --header "Content-Type: application/json" --request POST --data '{"roaster": {"email": "merit@coffee.com", "password": "meritcoffee"}}' http://localhost:3000/sessions
+=end
 
