@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2021_07_18_040209) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "roasters", force: :cascade do |t|
+  dcreate_table "roasters", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "img_url"
