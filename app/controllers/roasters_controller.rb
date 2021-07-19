@@ -9,4 +9,17 @@ class RoastersController < ApplicationController
     roaster = Roaster.find(params[:id])
     render json: {status: 200, roaster: roaster}
   end
+
+  def update
+    roaster = Roaster.find(params[:id])
+    roaster.update(roaster_params)
+    render(json: {roaster: roaster})
+  end
+
+  private # Any methods below here
+
+  def roaster_params
+    # Returns a sanitized hash of the params with nothing extra
+    params.permit(:name, :email, :img_url, :password_digest, :address, :website,  :phone, :latitude, :longitutde, :description)
+  end
 end
