@@ -16,6 +16,11 @@ class RoastersController < ApplicationController
     render(json: {roaster: roaster})
   end
 
+  def destroy
+    roaster = Roaster.destroy(params[:id])
+    render(status: 204)
+  end
+
   private # Any methods below here
 
   def roaster_params
