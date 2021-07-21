@@ -6,7 +6,7 @@ Rack::Cors do
   # end
 
   allow do
-    origins "*"
+    origins "http://localhost:3000"
     resource "*", headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head], credentials: true
   end
 end
