@@ -11,8 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
-ActiveRecord::Schema.define(version: 2021_07_21_084345) do
-
+ActiveRecord::Schema.define(version: 2021_07_21_235929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +58,7 @@ ActiveRecord::Schema.define(version: 2021_07_21_084345) do
     t.string "productionDate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "published"
     t.index ["roaster_id"], name: "index_roasts_on_roaster_id"
   end
 

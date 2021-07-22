@@ -3,7 +3,6 @@ class CreateRoasts < ActiveRecord::Migration[6.1]
     create_table :roasts do |t|
       t.string :name
       t.string :picture
-      t.string :type
       t.string :notes
       t.string :origin
       t.string :description
